@@ -1,16 +1,9 @@
-# Triggering a fresh workflow run
 from preprocessing import validate_dataframe, clean_data, encode_categoricals, check_data_quality
-import sys
-import os
 import pandas as pd
 import numpy as np
 import pytest
-
-# 1. Modify the path FIRST so Python knows where the 'src' directory is
-sys.path.insert(0, os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "..", "src")))
-
-# 2. NOW import your custom modules safely
+import sys
+import os
 
 
 @pytest.fixture
